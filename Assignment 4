@@ -1,0 +1,75 @@
+#include <iostream>
+using namespace std;
+class ArithmaticOpe
+{
+    private:
+        int n1, n2;
+    public:
+        void accept();
+        void addition();
+        void subtraction();
+        void division();
+        void multiplication();
+};
+
+inline void ArithmaticOpe :: accept()
+{
+    cout << " Enter First Integer n1 " << endl << " \t ";
+    cin >> n1;
+    cout << " Enter Second Integer n2 " << endl << " \t ";
+    cin >> n2;
+}
+
+inline void ArithmaticOpe :: addition()
+{
+    cout << " Addition : " << n1 + n2 << endl;       
+}
+
+inline void ArithmaticOpe :: subtraction()
+{
+    cout << " Subtraction : " << n1 - n2 << endl;        
+}
+
+inline void ArithmaticOpe :: division()
+{
+    cout << " Division : " << (float) n1 / n2 << endl;        
+}
+
+inline void ArithmaticOpe :: multiplication()
+{
+    cout << " Multiplication : " << n1 * n2 << endl;        
+}
+int main()
+
+{
+
+            int n, i;
+            ArithmaticOpe obj;
+            cout << " \t Enter two integer numbers " << endl;
+            obj.accept();
+            
+            while(true)
+            {
+                cout << "\tEnter the appropiate integer number for arithmetic operation";
+                cout << endl;
+                cout << " \t Addition : 1 \t\t Subtraction : 2" << endl;
+                cout << " \t Division : 3 \t\t Multiplication : 4" << endl;
+                cout << " \t\t QUIT : 5 OR Other" << endl;
+                cin >> n;
+
+                switch(n)
+            {
+                    case 1: obj.addition();
+                            break;
+                    case 2: obj.subtraction();
+                            break;
+                    case 3: obj.division();
+                            break;
+                    case 4: obj.multiplication();
+                            break;
+                    default : cout << "Thank You to use this program ! ";
+                            exit (0);
+                }
+            }
+            return 0;
+}
